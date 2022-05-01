@@ -1,0 +1,37 @@
+.card {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: .5rem;
+    padding: .5rem;
+    max-width: 700px;
+    margin: 0 auto;
+    display: none;
+}
+
+.questionBox {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+.questionBox > div {
+    text-align: center;
+}
+
+.questionBox > button {
+    padding: .25rem;
+}
+
+header {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.quizTitle {
+    font-weight: 600;
+    font-size: 50px;
+}
+
+.card.active {
+    display: block;
+}

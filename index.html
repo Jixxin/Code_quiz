@@ -1,28 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Code Quiz</title>
+    <link rel="stylesheet" href="./assets/style.css">
 </head>
-
 <body>
-    <div id="header">
-        <h1>Quiz</h1>
-        <button id="start">START</button>
+    <header>
+        <div  class="quizTitle">Random QUIZ</div>
+        <div id="hiscore">No Recent Scores</div>
+        <div id="timer">Time Remaining 60 seconds</div>
+    </header>
+    <div data-multi-step>
+        <div class="card active" data-step>
+            <div class="questionBox">
+                <div>Click the Start Button Below to Start the Quiz</div>
+             <button class="question" id="start" data-correct>START</button>
+            </div>
     </div>
-    <div id="results">WRONG/RIGHT</div>
-    <div id="quizbox" data-state="card0">
-        <div id="question"></div>
+        <div class="card" data-step>
+            <div class="questionBox">
+            <div>What is yellow?</div>
+             <button class="question" data-correct>A color</button>
+            <button class="question" data-incorrect>A beverage</button>
+            <button class="question" data-incorrect>Huh?</button>
+            <button class="question" data-incorrect>IDK!!!</button>
+            </div>
     </div>
-    <div id="info">
-        <p id="timer">Time Remaining: 60 seconds</p>
-        <p id="score">Scores</p>
+        <div class="card" data-step>
+            <div class="questionBox">
+            <div>Who should have a great day?</div>
+             <button class="question" data-incorrect>Me</button>
+            <button class="question" data-incorrect>You</button>
+            <button class="question" data-correct>Everyone</button>
+            <button class="question" data-incorrect>No one</button>
+            </div>
     </div>
-    <script src="script.js"></script>
+        <div class="card" data-step>
+            <div class="questionBox">
+            <div>Do you drink coffee?</div>
+             <button class="question" data-incorrect>No</button>
+            <button class="question" data-incorrect>I prefer tea</button>
+            <button class="question" data-incorrect>Coffee is gross</button>
+            <button class="question" data-correct>Yes</button>
+            </div>
+    </div>
+        <div class="card" data-step>
+            <div class="questionBox">
+            <div>Too Legit</div>
+             <button class="question" data-correct>Too legit to quit</button>
+            <button class="question" data-incorrect>Uhhhhh</button>
+            <button class="question" data-incorrect>This isn't a question?</button>
+            <button class="question" data-incorrect>McHammer</button>
+            </div>
+    </div>
+        <div class="card" data-step>
+            <div class="questionBox">
+            <div>Last Question</div>
+             <button class="question" data-incorrect>Incorrect, Do Not Press</button>
+            <button class="question" id="finalQ" data-correct>Correct, PLEASE PRESS</button>
+            <button class="question" data-incorrect>Incorrect, Do Not Press</button>
+            <button class="question" data-incorrect>Incorrect, Do Not Press</button>
+            </div>
+    </div>
+        <div class="card" data-step>
+            <div class="questionBox">
+                <div>Please enter your intials</div>
+                <input id="int"></input>
+                <button id="initials" data-correct>Score</button>
+            </div>
+    </div>
+        <div class="card" data-step>
+            <div class="questionBox">
+            <div>Game Over</div>
+            <div id="score">Score</div>
+            <div>To reset please refresh the browser or hit F5</div>
+            </div>
+    </div>
+    </div>
 </body>
-
+<script src="./assets/script.js" defer></script>
 </html>
